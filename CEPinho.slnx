@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CEPinho.Core/CEPinho.Core.csproj" />
+    <Project Path="src/CEPinho.Web/CEPinho.Web.csproj" />
+  </Folder>
+</Solution>
