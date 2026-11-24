@@ -3,10 +3,10 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /build
 
 # Copia os arquivos de projeto primeiro para aproveitar o cache de camadas do Docker
-COPY ["CEPinho.sln", "./"]
+COPY ["CEPinho.slnx", "./"]
 COPY ["src/CEPinho.Core/CEPinho.Core.csproj", "src/CEPinho.Core/"]
 COPY ["src/CEPinho.Web/CEPinho.Web.csproj", "src/CEPinho.Web/"]
-RUN dotnet restore "CEPinho.sln"
+RUN dotnet restore "CEPinho.slnx"
 
 # Copia o restante do código e publica em modo Release
 COPY . .

@@ -1,0 +1,28 @@
+# Controle de versão e documentação (não são necessários para compilar o código)
+**/.git
+**/.gitignore
+**/.dockerignore
+doc/
+README.md
+
+# Arquivos do macOS e IDEs (Rider / VS Code)
+**/.DS_Store
+**/.idea
+**/.vscode
+**/.vs
+
+# Artefatos de compilação local (evita conflito entre macOS ARM64 e Linux do container)
+**/bin
+**/obj
+**/out
+**/publish
+
+# Dados locais e banco SQLite futuro
+**/data
+**/*.db
+**/*.db-wal
+**/*.db-shm
+
+# Arquivos do próprio Docker
+Dockerfile
+docker-compose.yml
