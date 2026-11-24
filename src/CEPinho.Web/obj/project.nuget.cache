@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jJn3gMQgiM0=",
+  "dgSpecHash": "X1g7KlFn1xU=",
   "success": true,
   "projectFilePath": "/Users/helders/Developer/cepinho/src/CEPinho.Web/CEPinho.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/helders/.nuget/packages/microsoft.web.librarymanager.build/3.0.114/microsoft.web.librarymanager.build.3.0.114.nupkg.sha512"
+  ],
   "logs": []
 }

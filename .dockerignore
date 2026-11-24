@@ -26,3 +26,6 @@ README.md
 # Arquivos do próprio Docker
 Dockerfile
 docker-compose.yml
+
+# Bibliotecas de frontend (restauradas via libman.json no dotnet publish)
+**/wwwroot/lib

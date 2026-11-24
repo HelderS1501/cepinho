@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CEPinho.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db7c135769402d764b8de4539a574693259bee5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f538eb03ca57568055cd2c97c0b603f1bac02fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("CEPinho.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CEPinho.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CEPinho</title>
+    <link rel="icon" type="image/png" href="~/img/CEPinho-favicon.png" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" asp-append-version="true" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-sm border-bottom mb-4">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" asp-page="/Index">
+                    <img src="~/img/CEPinho-logo1.png" alt="Logo CEPinho" height="64" asp-append-version="true" />
+                    <!-- <span>CEPinho</span> -->
+                </a>
+                <button id="btn-theme-toggle" type="button" class="btn btn-outline-secondary btn-sm" title="Alternar tema">
+                    <i id="theme-icon" class="bi bi-moon-stars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container flex-grow-1">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top py-3 mt-5 text-muted small">
+        <div class="container d-flex justify-content-between">
+            <span>CEPinho &copy; @DateTime.Now.Year</span>
+            <span>Consulta via ViaCEP</span>
+        </div>
+    </footer>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script>
+        (() => {
+            const htmlEl = document.documentElement;
+            const toggleBtn = document.getElementById('btn-theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+
+            const aplicarTema = (tema) => {
+                htmlEl.setAttribute('data-bs-theme', tema);
+                themeIcon.className = tema === 'dark' ? 'bi bi-sun' : 'bi bi-moon-stars';
+                localStorage.setItem('cepinho-theme', tema);
+            };
+
+            const temaSalvo = localStorage.getItem('cepinho-theme') || 'light';
+            aplicarTema(temaSalvo);
+
+            toggleBtn.addEventListener('click', () => {
+                const atual = htmlEl.getAttribute('data-bs-theme');
+                aplicarTema(atual === 'dark' ? 'light' : 'dark');
+            });
+        })();
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

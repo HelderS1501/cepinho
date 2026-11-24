@@ -1,0 +1,97 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Consulta de CEP";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="text-center mb-4">
+            <h1 class="h3 fw-bold">Buscador de Endereços</h1>
+            <p class="text-muted">Digite um CEP brasileiro para consultar logradouro, bairro, cidade e UF.</p>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body p-4">
+                <form method="post">
+                    <label asp-for="Cep" class="form-label fw-semibold">CEP</label>
+                    <div class="input-group input-group-lg">
+                        <input asp-for="Cep"
+                               id="input-cep"
+                               class="form-control"
+                               placeholder="00000-000"
+                               maxlength="9"
+                               inputmode="numeric"
+                               autocomplete="postal-code"
+                               autofocus />
+                        <button type="submit" class="btn btn-primary px-4">
+                            <i class="bi bi-search me-1"></i> Buscar
+                        </button>
+                    </div>
+                    <div class="form-text">Aceita formato com ou sem hífen (ex: 01001-000).</div>
+                </form>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(Model.MensagemErro))
+        {
+            <div class="alert alert-warning d-flex align-items-center gap-2" role="alert">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                <div>@Model.MensagemErro</div>
+            </div>
+        }
+
+        @if (Model.EnderecoEncontrado is not null)
+        {
+            <div class="card border-primary shadow-sm">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <span class="fw-semibold">
+                        <i class="bi bi-geo-alt-fill me-1"></i> Endereço Encontrado
+                    </span>
+                    <span class="badge bg-light text-primary fs-6">@Model.EnderecoEncontrado.CEP</span>
+                </div>
+                <div class="card-body p-4">
+                    <dl class="row mb-0">
+                        <dt class="col-sm-4 text-muted">Logradouro</dt>
+                        <dd class="col-sm-8 fw-semibold">
+                            @(string.IsNullOrWhiteSpace(Model.EnderecoEncontrado.Logradouro) ? "CEP Único (Sem logradouro específico)" : Model.EnderecoEncontrado.Logradouro)
+                        </dd>
+
+                        @if (!string.IsNullOrWhiteSpace(Model.EnderecoEncontrado.Complemento))
+                        {
+                            <dt class="col-sm-4 text-muted">Complemento</dt>
+                            <dd class="col-sm-8">@Model.EnderecoEncontrado.Complemento</dd>
+                        }
+
+                        <dt class="col-sm-4 text-muted">Bairro</dt>
+                        <dd class="col-sm-8">
+                            @(string.IsNullOrWhiteSpace(Model.EnderecoEncontrado.Bairro) ? "—" : Model.EnderecoEncontrado.Bairro)
+                        </dd>
+
+                        <dt class="col-sm-4 text-muted">Cidade / UF</dt>
+                        <dd class="col-sm-8">@Model.EnderecoEncontrado.Cidade - @Model.EnderecoEncontrado.UF</dd>
+
+                        <dt class="col-sm-4 text-muted">Estado</dt>
+                        <dd class="col-sm-8">@Model.EnderecoEncontrado.Estado</dd>
+
+                        <dt class="col-sm-4 text-muted mb-0">DDD</dt>
+                        <dd class="col-sm-8 mb-0">(@Model.EnderecoEncontrado.DDD)</dd>
+                    </dl>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const inputCep = document.getElementById('input-cep');
+        inputCep.addEventListener('input', (e) => {
+            let valor = e.target.value.replace(/\D/g, '').slice(0, 8);
+            if (valor.length > 5) {
+                valor = valor.slice(0, 5) + '-' + valor.slice(5);
+            }
+            e.target.value = valor;
+        });
+    </script>
+}

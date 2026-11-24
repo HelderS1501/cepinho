@@ -495,3 +495,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Bibliotecas de frontend restauradas automaticamente pelo LibMan
+wwwroot/lib/
+
