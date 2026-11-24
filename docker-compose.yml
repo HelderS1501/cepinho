@@ -1,0 +1,25 @@
+services:
+  cepinho-web:
+    container_name: cepinho-web
+    hostname: cepinho-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    volumes:
+      - cepinho-data:/app/data
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M
+        reservations:
+          cpus: "0.25"
+          memory: 256M
+    restart: unless-stopped
+
+volumes:
+  cepinho-data:

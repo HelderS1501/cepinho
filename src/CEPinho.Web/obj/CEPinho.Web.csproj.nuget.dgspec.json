@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Web\\CEPinho.Web.csproj": {}
+    "/Users/helders/Developer/cepinho/src/CEPinho.Web/CEPinho.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Core\\CEPinho.Core.csproj": {
+    "/Users/helders/Developer/cepinho/src/CEPinho.Core/CEPinho.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Core\\CEPinho.Core.csproj",
+        "projectUniqueName": "/Users/helders/Developer/cepinho/src/CEPinho.Core/CEPinho.Core.csproj",
         "projectName": "CEPinho.Core",
-        "projectPath": "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Core\\CEPinho.Core.csproj",
-        "packagesPath": "C:\\Users\\h.souza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Core\\obj\\",
+        "projectPath": "/Users/helders/Developer/cepinho/src/CEPinho.Core/CEPinho.Core.csproj",
+        "packagesPath": "/Users/helders/.nuget/packages/",
+        "outputPath": "/Users/helders/Developer/cepinho/src/CEPinho.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\h.souza\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/helders/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "11.0.100"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -61,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -339,22 +340,23 @@
         }
       }
     },
-    "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Web\\CEPinho.Web.csproj": {
+    "/Users/helders/Developer/cepinho/src/CEPinho.Web/CEPinho.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Web\\CEPinho.Web.csproj",
+        "projectUniqueName": "/Users/helders/Developer/cepinho/src/CEPinho.Web/CEPinho.Web.csproj",
         "projectName": "CEPinho.Web",
-        "projectPath": "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Web\\CEPinho.Web.csproj",
-        "packagesPath": "C:\\Users\\h.souza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Web\\obj\\",
+        "projectPath": "/Users/helders/Developer/cepinho/src/CEPinho.Web/CEPinho.Web.csproj",
+        "packagesPath": "/Users/helders/.nuget/packages/",
+        "outputPath": "/Users/helders/Developer/cepinho/src/CEPinho.Web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\h.souza\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/helders/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -362,8 +364,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Core\\CEPinho.Core.csproj": {
-                "projectPath": "C:\\Users\\h.souza\\Desktop\\CEPinho\\src\\CEPinho.Core\\CEPinho.Core.csproj"
+              "/Users/helders/Developer/cepinho/src/CEPinho.Core/CEPinho.Core.csproj": {
+                "projectPath": "/Users/helders/Developer/cepinho/src/CEPinho.Core/CEPinho.Core.csproj"
               }
             }
           }
@@ -378,7 +380,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "11.0.100"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -400,7 +402,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
